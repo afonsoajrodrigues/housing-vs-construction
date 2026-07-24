@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portugal's House Prices Are Rising Twice as Fast as the Cost to Build Them</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page); color: var(--text-primary);
+    --page: #f9f9f7; --surface: #fcfcfb; --text-primary: #0b0b0b;
+    --text-secondary: #52514e; --text-muted: #898781; --gridline: #e1e0d9;
+    --border: rgba(11,11,11,0.10); --accent: #2a78d6; --note-bg: #f2f1ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      --page: #0d0d0d; --surface: #1a1a19; --text-primary: #ffffff;
+      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
+      --border: rgba(255,255,255,0.10); --accent: #3987e5; --note-bg: #222221;
+    }
+  }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  .kicker {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(28px, 4.5vw, 40px); line-height: 1.15; font-weight: 700;
+    margin: 0 0 18px; letter-spacing: -0.01em;
+  }
+  .dek {
+    font-size: 19px; line-height: 1.5; color: var(--text-secondary); font-style: italic;
+    margin: 0 0 20px; font-weight: 400;
+  }
+  .byline {
+    font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--gridline);
+    border-bottom: 1px solid var(--gridline); padding: 12px 0; margin: 0 0 36px;
+  }
+
+  article p {
+    font-size: 18px; line-height: 1.65; color: var(--text-primary); margin: 0 0 22px;
+  }
+  article h2 {
+    font-size: 24px; font-weight: 700; margin: 44px 0 18px; letter-spacing: -0.005em;
+  }
+  article a { color: var(--accent); text-decoration-thickness: 1px; }
+  article em { color: var(--text-secondary); }
+
+  figure { margin: 32px 0 36px; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--border); }
+  figcaption { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+
+  .map-frame {
+    width: 100%; height: 640px; border: 1px solid var(--border); border-radius: 8px;
+    display: block; background: var(--surface);
+  }
+  .map-link { font-size: 14px; margin-top: 8px; }
+
+  .note {
+    background: var(--note-bg); border-radius: 8px; padding: 20px 22px; margin: 40px 0 0;
+    font-size: 14.5px; line-height: 1.6; color: var(--text-secondary);
+  }
+  .note strong { color: var(--text-primary); }
+
+  .sources {
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gridline);
+  }
+  .sources h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 16px; }
+  .sources ol { padding-left: 20px; margin: 0; }
+  .sources li { font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 8px; }
+  .sources a { color: var(--accent); word-break: break-word; }
+
+  footer { margin-top: 48px; font-size: 12.5px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Data Journalism</p>
+  <h1>Portugal's House Prices Are Rising Twice as Fast as the Cost to Build Them</h1>
+  <p class="dek">New official data show a gap between what homes cost to build and what they sell for that is wider in Portugal than anywhere else in a group of eight European economies — and the usual explanation, rising construction costs, accounts for less than half of it.</p>
+  <p class="byline">Afonso Rodrigues · Data: Eurostat &amp; INE · Published 2026-07-23</p>
+
+  <article>
+    <p>Portugal's house price index rose 71% between 2020 and 2025, according to Eurostat, while the country's own index of new-home construction costs rose 33% over the same period, data from Portugal's national statistics institute, INE, show. Prices grew at a compound rate of 11.3% a year — roughly double the 5.9% annual pace of construction costs.</p>
+
+    <p>The two measures started at the same level in 2020. By 2025, the house-price index had reached 171 against a construction-cost index of 133 (2020 = 100) — a gap of 38 percentage points that widened every year of the five-year period, this analysis found.</p>
+
+    <p>Among eight European countries with complete Eurostat house-price data through 2025, Portugal's 71% increase is the largest, ahead of the Netherlands (49%) and Spain (42%). Austria and Belgium each rose 23%, Italy 16%, and Germany and France — Europe's two largest economies — rose just 10% and 9% respectively.</p>
+
+    <figure>
+      <img src="assets/chart-price-vs-cost.svg" alt="Line chart: Portugal's house price index vs. construction cost index, 2020-2025, both indexed to 2020=100">
+      <figcaption>Portugal's house-price index vs. construction-cost index, 2020–2025 (2020 = 100). Source: Eurostat (prc_hpi_a) and INE.</figcaption>
+    </figure>
+
+    <h2>Why it matters</h2>
+    <p>A construction-cost index measures materials and labor: concrete, steel, wages on a building site. It does not include the price of land, a developer's profit margin, financing costs or taxes. When home prices rise much faster than it costs to build a home, the gap has to be explained by something else — land, demand, or the way housing itself is bought and sold. Economists and reporters covering Portugal's housing market have spent the past three years trying to identify which.</p>
+
+    <figure>
+      <img src="assets/chart-country-growth.svg" alt="Bar chart: house price growth 2020-2025 by country, Portugal highlighted as the largest increase">
+      <figcaption>Growth in the house-price index, 2020–2025, eight European countries. Source: Eurostat (prc_hpi_a).</figcaption>
+    </figure>
+
+    <h2>Where the extra demand came from</h2>
+    <p>Two tax and residency programs made Portugal unusually attractive to foreign buyers for over a decade. The Golden Visa, in place since 2012, granted residency in exchange for investment, and real estate was for years the most popular route; the Non-Habitual Resident (NHR) regime offered qualifying foreign residents a flat 20% tax rate and exemptions on foreign income. Bloomberg reported in February 2023 that the Golden Visa alone had drawn €6.8 billion into Portugal since 2012, most of it into property.</p>
+
+    <p>The government moved to unwind both. Facing a housing crisis in which Lisbon rents had jumped 37% in a single year and more than half the country's workers earned under €1,000 a month, the government of then-Prime Minister António Costa — now president of the European Council — passed the "Mais Habitação" package in 2023, according to Reuters, ending new Golden Visa real-estate applications and banning new short-term rental licenses outside rural areas. The real-estate investment route was formally removed in October 2023, industry-law publication The National Law Review reported. The NHR regime closed to new applicants at the start of 2024 and was replaced by a narrower scheme, IFICI, limited largely to science and technology professionals, according to a 2025 client alert from the professional services firm KPMG.</p>
+
+    <p>Short-term rentals left an independently measurable mark on prices even before the 2023 crackdown. A peer-reviewed study published in <em>Regional Science and Urban Economics</em> in 2021 found that a one-percentage-point increase in a municipality's share of Airbnb listings was associated with a 3.7% increase in house prices nationally, with the effect concentrated in Lisbon, Porto and historic tourist districts.</p>
+
+    <p>Foreign demand also shows up directly in what buyers pay. Bloomberg reported in 2022 that foreign buyers in Lisbon paid a median €4,283 per square meter, more than double the €1,858 paid by local buyers — a two-tier market that a single national price index does not separate out, but that pulls the overall average up. That demand also proved resistant to the European Central Bank's 2022–2023 rate increases: Bloomberg reported in September 2023 that Portuguese prices kept climbing through the hiking cycle, in part because many foreign buyers purchased in cash and were largely insulated from mortgage costs.</p>
+
+    <h2>Why supply hasn't caught up</h2>
+    <p>Construction costs did rise — INE's most recent figures show the sharpest jump in the labor component since 2023 — but the bigger constraint may be that Portugal simply isn't building enough new homes to meet demand, regardless of price.</p>
+
+    <p>Foreign workers make up roughly 30% of Portugal's construction workforce, in a sector equivalent to about 8% of GDP, Reuters reported in July 2026. The same report cited a Bank of Portugal finding that net immigration had roughly halved in 2025 after the government tightened immigration rules — squeezing exactly the labor supply needed to build more housing even as officials tried to address the housing crisis. "Too much and too quickly," University of Porto economist Óscar Afonso told Reuters of the timing of the restrictions.</p>
+
+    <p>Zoning, heritage-preservation rules and permitting delays in Lisbon and Porto add a further, non-cost constraint on new supply, according to research from the real estate firm Cushman &amp; Wakefield. A June 2026 Bank of Portugal study found the steepest price increases — homes more than doubling in value since 2017 — concentrated precisely in the supply-constrained metro areas of Lisbon, Porto and the Setúbal peninsula, according to reporting by the Portuguese outlet O Mirante.</p>
+
+    <p>That combination — costly, slow-to-expand supply meeting resilient, partly foreign, partly cash-financed demand — is close to the general mechanism economists use to explain why prices and building costs decouple almost anywhere. In a widely cited 2017 paper in the <em>American Economic Review</em>, Katharina Knoll, Moritz Schularick and Thomas Steger traced house prices across 14 advanced economies back to 1870 and found that rising land prices, not the cost of construction, explained roughly 80% of the global increase in house prices since 1950. Land, unlike concrete or labor, cannot be manufactured to meet demand.</p>
+
+    <h2>A different story in Germany and France</h2>
+    <p>Portugal's trajectory is not the European default. In its February 2025 Economic Bulletin, the European Central Bank noted that the recent house-price correction across the eurozone was led by "core" economies — Germany, France, the Netherlands, Austria, Belgium — reversing the pattern of the 2008 financial crisis and the euro debt crisis, when peripheral countries like Spain led the declines. Only 12 of 19 euro-area countries saw prices fall at all in this cycle, a far less widespread downturn than in the past.</p>
+
+    <p>Germany's prices fell 4.1% in 2023 after rising 9% the year before, the Bundesbank reported, as high inflation and the ECB's rate increases pushed buyers toward renting instead. A Reuters poll of property analysts in May 2024 forecast a further German price decline, even as annual housing completions dropped toward 195,000 units — evidence, the poll suggested, that Germany's weakness reflected an affordability shock hitting demand rather than a glut of new supply.</p>
+
+    <p>The ECB's own breakdown of housing investment found Germany down 18% and France down 13% since 2022, while Italy and Spain grew — Italy helped by renovation-incentive subsidies. The contrast suggests that the same interest-rate cycle that cooled demand in Germany and France left Iberian markets largely undisturbed, because a meaningful share of buyers there were not relying on mortgages in the first place.</p>
+
+    <h2>Explore the map</h2>
+    <p>House-price growth by country, 2020–2025 — hover or click a country for details, toggle layers, zoom and pan.</p>
+    <iframe class="map-frame" src="assets/map.html" title="Interactive map: house price growth in Europe, 2020-2025"></iframe>
+    <p class="map-link"><a href="assets/map.html" target="_blank">Open the map full-screen →</a></p>
+
+    <h2>What the data don't show</h2>
+    <p>This analysis compares two indices, not two prices — it measures how fast each grew from a common 2020 starting point, not what a home or a construction project actually costs in euros today. Portugal is also the only country in this comparison with a construction-cost series running through 2025; for the other seven, only the price side of the story could be measured here, so it isn't possible to say from this data alone whether Spain's or the Netherlands' price growth outpaced their own building costs by a similar margin. INE's construction-cost figure was checked against a second, independent Eurostat series through 2023, the two agreeing within 1.1 percentage points.</p>
+
+    <p>Nor does any single factor above fully explain the 38-point gap; the reporting and research cited here identify contributing pressures — foreign and tax-driven demand, tourism conversion of housing stock, a shrinking construction labor pool, land scarcity, slow permitting — without assigning each one a precise share of the total.</p>
+
+    <div class="note">
+      <strong>How this was done:</strong> Portugal's house-price and construction-cost series were each re-based to 2020=100 to allow direct comparison across indices published on different base years. Eurostat's house-price index (prc_hpi_a) and INE's construction-cost index for new housing are the primary sources; Ireland, whose post-2008 market dynamics are not comparable to the rest of this sample, was excluded from the country comparison. Explanatory reporting and research cited above draws only on named newspapers, wire services and peer-reviewed or institutional publications, each linked below.
+    </div>
+
+    <div class="sources">
+      <h2>Sources</h2>
+      <ol>
+        <li>Eurostat, House price index (prc_hpi_a) — <a href="https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a" target="_blank">ec.europa.eu/eurostat</a></li>
+        <li>INE, Índice de custo da construção de habitação nova — <a href="https://www.ine.pt" target="_blank">ine.pt</a></li>
+        <li>Reuters, "Portugal ends golden visas, curtails Airbnb rentals to address housing crisis," Feb. 2023 — <a href="https://www.investing.com/news/economy/portugal-ends-golden-visas-curtails-airbnb-rentals-to-address-housing-crisis-3029308" target="_blank">investing.com</a></li>
+        <li>Bloomberg, "Rising House Prices Push Portugal to End Golden Visa Program," Feb. 2023 — <a href="https://www.bloomberg.com/news/articles/2023-02-17/runaway-property-costs-push-portugal-to-end-golden-era-of-visas" target="_blank">bloomberg.com</a></li>
+        <li>The National Law Review, "Portugal Ends Real Estate Investment Visa Program," Oct. 2023 — <a href="https://natlawreview.com/article/update-portugal-ends-real-estate-investment-visa-program" target="_blank">natlawreview.com</a></li>
+        <li>KPMG, Flash Alert on Portugal's IFICI tax regime, 2025 — <a href="https://kpmg.com/xx/en/our-insights/gms-flash-alert/flash-alert-2025-044.html" target="_blank">kpmg.com</a></li>
+        <li>Franco, Santos &amp; Longo, "The impact of Airbnb on residential property values and rents: Evidence from Portugal," <em>Regional Science and Urban Economics</em>, vol. 88, 2021 — <a href="https://ideas.repec.org/a/eee/regeco/v88y2021ics0166046221000272.html" target="_blank">ideas.repec.org</a></li>
+        <li>Bloomberg, "Foreigners spend twice the money on a Lisbon home than locals," Apr. 2022 — <a href="https://www.bloomberg.com/news/articles/2022-04-21/foreigners-spend-twice-the-money-on-a-lisbon-home-than-locals" target="_blank">bloomberg.com</a></li>
+        <li>Bloomberg, "Portugal House Prices Defy Interest Rate Hikes on Strong Foreign Demand," Sept. 2023 — <a href="https://www.bloomberg.com/news/articles/2023-09-06/portugal-home-prices-defy-rate-hikes-on-strong-foreign-demand" target="_blank">bloomberg.com</a></li>
+        <li>Reuters, "Portugal's migrant curbs hit construction firms working to solve housing crisis," Jul. 2026 — <a href="https://www.investing.com/news/economy-news/analysisportugals-migrant-curbs-hit-construction-firms-working-to-solve-housing-crisis-4800030" target="_blank">investing.com</a></li>
+        <li>Banco de Portugal study, reported by O Mirante, Jun. 2026 — <a href="https://omirante.pt/nacional/2026-06-15-estudo-do-banco-de-portugal-revela-escalada-dos-precos-da-habitacao-4b8416ba" target="_blank">omirante.pt</a></li>
+        <li>INE construction-cost data, reported by ECO, Jun. 2026 — <a href="https://eco.sapo.pt/2026/06/09/custo-de-construir-casa-nova-acelera-59-em-abril-mao-de-obra-continua-a-pesar/" target="_blank">eco.sapo.pt</a></li>
+        <li>Cushman &amp; Wakefield Portugal, "Residential Development in Lisbon and Porto — The Supply Challenge" — <a href="https://www.cushmanwakefield.com/en/portugal/insights/residential-development-in-lisbon-and-porto" target="_blank">cushmanwakefield.com</a></li>
+        <li>Knoll, Schularick &amp; Steger, "No Price Like Home: Global House Prices, 1870–2012," <em>American Economic Review</em>, 107(2), 2017 — <a href="https://www.aeaweb.org/articles?id=10.1257%2Faer.20150501" target="_blank">aeaweb.org</a></li>
+        <li>European Central Bank, "Developments in the recent euro area house price cycle," <em>Economic Bulletin</em> 2/2025 — <a href="https://www.ecb.europa.eu/press/economic-bulletin/articles/2025/html/ecb.ebart202502_01~2f59dafb26.en.html" target="_blank">ecb.europa.eu</a></li>
+        <li>European Central Bank, box on euro area housing investment, <em>Economic Bulletin</em> 1/2026 — <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202601_04~ff6f689474.en.html" target="_blank">ecb.europa.eu</a></li>
+        <li>Deutsche Bundesbank, "House prices fell significantly in 2023; more pressure on rents," 2024 — <a href="https://www.bundesbank.de/en/tasks/topics/house-prices-fell-significantly-in-2023-more-pressure-on-rents-856326" target="_blank">bundesbank.de</a></li>
+        <li>Reuters poll of property analysts, May 2024 — <a href="https://investing.com/news/economic-indicators/german-home-prices-to-fall-2-in-2024-supply-to-lag-demand-reuters-poll-3449744" target="_blank">investing.com</a></li>
+      </ol>
+    </div>
+
+    <footer>Data: Eurostat and INE. Full source list above. © 2026 Afonso Rodrigues.</footer>
+  </article>
+</div>
+</body>
+</html>

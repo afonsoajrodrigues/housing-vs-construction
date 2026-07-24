@@ -11,6 +11,16 @@ A data journalism piece comparing Portugal's house-price index (Eurostat) agains
 - `assets/chart-country-growth.svg` — house-price growth by country, 2020–2025
 - `assets/map.html` — interactive map of house-price growth across Europe
 - `code/` — the Python scripts that produced the charts and the map, plus the data they use
+- `SCRAPING.md` — how the underlying data was originally collected, before it ever reached `code/`
+
+## How the data was collected
+
+The raw numbers in `code/data/` (Eurostat's house price index, INE's
+construction cost index) came out of a separate project practicing web
+scraping and public-data APIs — static HTML parsing, browser automation,
+Scrapy, and reverse-engineering official statistical APIs (INE, Eurostat,
+World Bank, UN, NASA, the EU open data portal). The full write-up of that
+process is in **[SCRAPING.md](SCRAPING.md)**.
 
 ## How the charts and the map were made
 

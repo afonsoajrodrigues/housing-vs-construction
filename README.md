@@ -2,7 +2,7 @@
 
 A data journalism piece comparing Portugal's house-price index (Eurostat) against its construction-cost index (INE) from 2020 to 2025, with a country comparison across eight European economies and sourced context on why the gap has widened.
 
-**Read it:** https://afonsoajrodrigues.github.io/portugal-habitacao-vs-construcao/
+**Read it:** https://afonsoajrodrigues.github.io/housing-vs-construction/
 
 ## Contents
 

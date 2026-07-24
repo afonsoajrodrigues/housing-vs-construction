@@ -1,76 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 456" width="720" height="456" role="img">
-<style>
-    .surface { fill: var(--surface-1); }
-    text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--text-primary); }
-    .subtitle, .axis-label, .footer { fill: var(--text-secondary); }
-    .muted { fill: var(--text-muted); }
-    .gridline { stroke: var(--gridline); stroke-width: 1; }
-    .baseline { stroke: var(--baseline); stroke-width: 1; }
-    :root { color-scheme: light; }
-    svg {
-      --surface-1: #fcfcfb;
-      --text-primary: #0b0b0b;
-      --text-secondary: #52514e;
-      --text-muted: #898781;
-      --gridline: #e1e0d9;
-      --baseline: #c3c2b7;
-      --series-1: #2a78d6;
-      --series-2: #eb6834;
-      --context-bar: #c3c2b7;
-    }
-    @media (prefers-color-scheme: dark) {
-      svg {
-        --surface-1: #1a1a19;
-        --text-primary: #ffffff;
-        --text-secondary: #c3c2b7;
-        --text-muted: #898781;
-        --gridline: #2c2c2a;
-        --baseline: #383835;
-        --series-1: #3987e5;
-        --series-2: #d95926;
-        --context-bar: #383835;
-      }
-    }
-</style>
-<rect class="surface" x="0" y="0" width="720" height="456"/>
-
-<text x="140" y="30" font-size="19" font-weight="600">Portugal leads Europe's house-price surge</text>
-<text class="subtitle" x="140" y="52" font-size="13">Growth in the house price index, 2020-2025 (%)</text>
-<line class="gridline" x1="140.0" y1="70" x2="140.0" y2="390"/>
-<text class="axis-label" x="140.0" y="408" font-size="12" text-anchor="middle">+0%</text>
-<line class="gridline" x1="267.5" y1="70" x2="267.5" y2="390"/>
-<text class="axis-label" x="267.5" y="408" font-size="12" text-anchor="middle">+20%</text>
-<line class="gridline" x1="395.0" y1="70" x2="395.0" y2="390"/>
-<text class="axis-label" x="395.0" y="408" font-size="12" text-anchor="middle">+40%</text>
-<line class="gridline" x1="522.5" y1="70" x2="522.5" y2="390"/>
-<text class="axis-label" x="522.5" y="408" font-size="12" text-anchor="middle">+60%</text>
-<line class="gridline" x1="650.0" y1="70" x2="650.0" y2="390"/>
-<text class="axis-label" x="650.0" y="408" font-size="12" text-anchor="middle">+80%</text>
-<line class="baseline" x1="140" y1="70" x2="140" y2="390"/>
-<text x="128" y="94.0" font-size="13" text-anchor="end" font-weight="400">France</text>
-<rect x="140" y="79.0" width="58.2" height="22" rx="4" fill="var(--context-bar)"><title>France: +9.1% between 2020 and 2025 (CAGR 1.8%/yr)</title></rect>
-<text x="206.2" y="94.0" font-size="13" font-weight="400">+9%</text>
-<text x="128" y="134.0" font-size="13" text-anchor="end" font-weight="400">Germany</text>
-<rect x="140" y="119.0" width="64.3" height="22" rx="4" fill="var(--context-bar)"><title>Germany: +10.1% between 2020 and 2025 (CAGR 1.9%/yr)</title></rect>
-<text x="212.3" y="134.0" font-size="13" font-weight="400">+10%</text>
-<text x="128" y="174.0" font-size="13" text-anchor="end" font-weight="400">Italy</text>
-<rect x="140" y="159.0" width="100.3" height="22" rx="4" fill="var(--context-bar)"><title>Italy: +15.7% between 2020 and 2025 (CAGR 3.0%/yr)</title></rect>
-<text x="248.3" y="174.0" font-size="13" font-weight="400">+16%</text>
-<text x="128" y="214.0" font-size="13" text-anchor="end" font-weight="400">Belgium</text>
-<rect x="140" y="199.0" width="144.5" height="22" rx="4" fill="var(--context-bar)"><title>Belgium: +22.7% between 2020 and 2025 (CAGR 4.2%/yr)</title></rect>
-<text x="292.5" y="214.0" font-size="13" font-weight="400">+23%</text>
-<text x="128" y="254.0" font-size="13" text-anchor="end" font-weight="400">Austria</text>
-<rect x="140" y="239.0" width="149.6" height="22" rx="4" fill="var(--context-bar)"><title>Austria: +23.5% between 2020 and 2025 (CAGR 4.3%/yr)</title></rect>
-<text x="297.6" y="254.0" font-size="13" font-weight="400">+23%</text>
-<text x="128" y="294.0" font-size="13" text-anchor="end" font-weight="400">Spain</text>
-<rect x="140" y="279.0" width="265.5" height="22" rx="4" fill="var(--context-bar)"><title>Spain: +41.6% between 2020 and 2025 (CAGR 7.2%/yr)</title></rect>
-<text x="413.5" y="294.0" font-size="13" font-weight="400">+42%</text>
-<text x="128" y="334.0" font-size="13" text-anchor="end" font-weight="400">Netherlands</text>
-<rect x="140" y="319.0" width="314.5" height="22" rx="4" fill="var(--context-bar)"><title>Netherlands: +49.3% between 2020 and 2025 (CAGR 8.4%/yr)</title></rect>
-<text x="462.5" y="334.0" font-size="13" font-weight="400">+49%</text>
-<text x="128" y="374.0" font-size="13" text-anchor="end" font-weight="600">Portugal</text>
-<rect x="140" y="359.0" width="452.4" height="22" rx="4" fill="var(--series-1)"><title>Portugal: +71.0% between 2020 and 2025 (CAGR 11.3%/yr)</title></rect>
-<text x="600.4" y="374.0" font-size="13" font-weight="600">+71%</text>
-<text class="footer" x="140" y="422" font-size="11">Source: Eurostat (prc_hpi_a) and INE — accessed 2026-07-23.</text>
-<text class="footer" x="140" y="440" font-size="11">Index re-based to 2020=100 before calculating growth.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="436" viewBox="0 0 700 436">
+<rect width="700" height="436" fill="white"/>
+<text x="140" y="30" font-size="18" font-weight="bold" font-family='Arial, sans-serif'>House price growth by country, 2020-2025</text>
+<text x="130" y="82" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>France</text>
+<rect x="140" y="66" width="54.74189675870352" height="22" fill="#c3c2b7"/>
+<text x="202.74189675870352" y="82" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+9%</text>
+<text x="130" y="124" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Germany</text>
+<rect x="140" y="108" width="60.56236481614996" height="22" fill="#c3c2b7"/>
+<text x="208.56236481614997" y="124" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+10%</text>
+<text x="130" y="166" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Italy</text>
+<rect x="140" y="150" width="94.422310756972" height="22" fill="#c3c2b7"/>
+<text x="242.422310756972" y="166" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+16%</text>
+<text x="130" y="208" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Belgium</text>
+<rect x="140" y="192" width="136.01490388686605" height="22" fill="#c3c2b7"/>
+<text x="284.014903886866" y="208" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+23%</text>
+<text x="130" y="250" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Austria</text>
+<rect x="140" y="234" width="140.83530106257385" height="22" fill="#c3c2b7"/>
+<text x="288.8353010625739" y="250" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+23%</text>
+<text x="130" y="292" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Spain</text>
+<rect x="140" y="276" width="249.88235294117655" height="22" fill="#c3c2b7"/>
+<text x="397.8823529411766" y="292" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+42%</text>
+<text x="130" y="334" font-size="13" text-anchor="end" font-weight="normal" font-family='Arial, sans-serif'>Netherlands</text>
+<rect x="140" y="318" width="296.0227667106269" height="22" fill="#c3c2b7"/>
+<text x="444.0227667106269" y="334" font-size="13" font-weight="normal" font-family='Arial, sans-serif'>+49%</text>
+<text x="130" y="376" font-size="13" text-anchor="end" font-weight="bold" font-family='Arial, sans-serif'>Portugal</text>
+<rect x="140" y="360" width="425.78889392859446" height="22" fill="#2a78d6"/>
+<text x="573.7888939285945" y="376" font-size="13" font-weight="bold" font-family='Arial, sans-serif'>+71%</text>
+<text x="140" y="421" font-size="11" fill="#888" font-family='Arial, sans-serif'>Source: Eurostat.</text>
 </svg>

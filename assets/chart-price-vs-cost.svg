@@ -1,85 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480" role="img">
-<style>
-    .surface { fill: var(--surface-1); }
-    text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--text-primary); }
-    .subtitle, .axis-label, .footer { fill: var(--text-secondary); }
-    .muted { fill: var(--text-muted); }
-    .gridline { stroke: var(--gridline); stroke-width: 1; }
-    .baseline { stroke: var(--baseline); stroke-width: 1; }
-    :root { color-scheme: light; }
-    svg {
-      --surface-1: #fcfcfb;
-      --text-primary: #0b0b0b;
-      --text-secondary: #52514e;
-      --text-muted: #898781;
-      --gridline: #e1e0d9;
-      --baseline: #c3c2b7;
-      --series-1: #2a78d6;
-      --series-2: #eb6834;
-      --context-bar: #c3c2b7;
-    }
-    @media (prefers-color-scheme: dark) {
-      svg {
-        --surface-1: #1a1a19;
-        --text-primary: #ffffff;
-        --text-secondary: #c3c2b7;
-        --text-muted: #898781;
-        --gridline: #2c2c2a;
-        --baseline: #383835;
-        --series-1: #3987e5;
-        --series-2: #d95926;
-        --context-bar: #383835;
-      }
-    }
-</style>
-<rect class="surface" x="0" y="0" width="720" height="480"/>
-
-<text x="56" y="32" font-size="19" font-weight="600">Portugal: house prices are rising twice as fast as construction costs</text>
-<text class="subtitle" x="56" y="54" font-size="13">Annual indices, 2020 = 100 (not absolute value — see note)</text>
-<line class="gridline" x1="56" y1="404.0" x2="590" y2="404.0"/>
-<text class="axis-label" x="46" y="408.0" font-size="12" text-anchor="end">90</text>
-<line class="gridline" x1="56" y1="352.0" x2="590" y2="352.0"/>
-<text class="axis-label" x="46" y="356.0" font-size="12" text-anchor="end">105</text>
-<line class="gridline" x1="56" y1="300.0" x2="590" y2="300.0"/>
-<text class="axis-label" x="46" y="304.0" font-size="12" text-anchor="end">120</text>
-<line class="gridline" x1="56" y1="248.0" x2="590" y2="248.0"/>
-<text class="axis-label" x="46" y="252.0" font-size="12" text-anchor="end">135</text>
-<line class="gridline" x1="56" y1="196.0" x2="590" y2="196.0"/>
-<text class="axis-label" x="46" y="200.0" font-size="12" text-anchor="end">150</text>
-<line class="gridline" x1="56" y1="144.0" x2="590" y2="144.0"/>
-<text class="axis-label" x="46" y="148.0" font-size="12" text-anchor="end">165</text>
-<line class="gridline" x1="56" y1="92.0" x2="590" y2="92.0"/>
-<text class="axis-label" x="46" y="96.0" font-size="12" text-anchor="end">180</text>
-<line class="baseline" x1="56" y1="369.3" x2="590" y2="369.3"/>
-<text class="axis-label" x="56.0" y="426" font-size="12" text-anchor="middle">2020</text>
-<text class="axis-label" x="162.8" y="426" font-size="12" text-anchor="middle">2021</text>
-<text class="axis-label" x="269.6" y="426" font-size="12" text-anchor="middle">2022</text>
-<text class="axis-label" x="376.4" y="426" font-size="12" text-anchor="middle">2023</text>
-<text class="axis-label" x="483.2" y="426" font-size="12" text-anchor="middle">2024</text>
-<text class="axis-label" x="590.0" y="426" font-size="12" text-anchor="middle">2025</text>
-<path d="M 56.0,369.3 L 162.8,336.7 L 269.6,288.8 L 376.4,253.8 L 483.2,211.8 L 590.0,123.3 L 590.0,254.2 L 483.2,272.0 L 376.4,289.9 L 269.6,297.2 L 162.8,338.7 L 56.0,369.3 Z" fill="var(--series-1)" opacity="0.10"/>
-<path d="M 56.0,369.3 L 162.8,338.7 L 269.6,297.2 L 376.4,289.9 L 483.2,272.0 L 590.0,254.2" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M 56.0,369.3 L 162.8,336.7 L 269.6,288.8 L 376.4,253.8 L 483.2,211.8 L 590.0,123.3" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="56.0" cy="369.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2020: index 100.0</title></circle>
-<circle cx="162.8" cy="338.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2021: index 108.8</title></circle>
-<circle cx="269.6" cy="297.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2022: index 120.8</title></circle>
-<circle cx="376.4" cy="289.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2023: index 122.9</title></circle>
-<circle cx="483.2" cy="272.0" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2024: index 128.1</title></circle>
-<circle cx="590.0" cy="254.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>Construction cost 2025: index 133.2</title></circle>
-<circle cx="56.0" cy="369.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2020: index 100.0</title></circle>
-<circle cx="162.8" cy="336.7" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2021: index 109.4</title></circle>
-<circle cx="269.6" cy="288.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2022: index 123.2</title></circle>
-<circle cx="376.4" cy="253.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2023: index 133.3</title></circle>
-<circle cx="483.2" cy="211.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2024: index 145.4</title></circle>
-<circle cx="590.0" cy="123.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>House price 2025: index 171.0</title></circle>
-<text x="600.0" y="119.3" font-size="13" font-weight="600" fill="var(--text-primary)">House price</text>
-<text x="600.0" y="137.3" font-size="13" fill="var(--text-primary)">+71%</text>
-<text x="600.0" y="250.2" font-size="13" font-weight="600" fill="var(--text-primary)">Construction cost</text>
-<text x="600.0" y="268.2" font-size="13" fill="var(--text-primary)">+33%</text>
-<circle cx="61" cy="66" r="5" fill="var(--series-1)"/>
-<text x="72" y="70" font-size="12" class="subtitle">House price index (Eurostat)</text>
-<circle cx="271" cy="66" r="5" fill="var(--series-2)"/>
-<text x="282" y="70" font-size="12" class="subtitle">Construction cost index (INE)</text>
-<text class="footer" x="56" y="446" font-size="11">Source: Eurostat (prc_hpi_a) and INE — accessed 2026-07-23.</text>
-<text class="footer" x="56" y="464" font-size="11">Y axis set to 90-180 (index, not absolute value) to make the gap visible.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420">
+<rect width="780" height="420" fill="white"/>
+<text x="60" y="30" font-size="18" font-weight="bold" font-family='Arial, sans-serif'>House prices vs. construction costs, Portugal</text>
+<text x="60" y="50" font-size="13" fill="#666" font-family='Arial, sans-serif'>Index, 2020 = 100</text>
+<line x1="60" y1="330.0" x2="600" y2="330.0" stroke="#e0e0e0"/>
+<text x="50" y="334.0" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>90</text>
+<line x1="60" y1="286.6666666666667" x2="600" y2="286.6666666666667" stroke="#e0e0e0"/>
+<text x="50" y="290.6666666666667" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>105</text>
+<line x1="60" y1="243.33333333333331" x2="600" y2="243.33333333333331" stroke="#e0e0e0"/>
+<text x="50" y="247.33333333333331" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>120</text>
+<line x1="60" y1="200.0" x2="600" y2="200.0" stroke="#e0e0e0"/>
+<text x="50" y="204.0" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>135</text>
+<line x1="60" y1="156.66666666666666" x2="600" y2="156.66666666666666" stroke="#e0e0e0"/>
+<text x="50" y="160.66666666666666" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>150</text>
+<line x1="60" y1="113.33333333333333" x2="600" y2="113.33333333333333" stroke="#e0e0e0"/>
+<text x="50" y="117.33333333333333" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>165</text>
+<line x1="60" y1="70.0" x2="600" y2="70.0" stroke="#e0e0e0"/>
+<text x="50" y="74.0" font-size="12" text-anchor="end" font-family='Arial, sans-serif'>180</text>
+<text x="60.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2020</text>
+<text x="168.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2021</text>
+<text x="276.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2022</text>
+<text x="384.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2023</text>
+<text x="492.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2024</text>
+<text x="600.0" y="350" font-size="12" text-anchor="middle" font-family='Arial, sans-serif'>2025</text>
+<polygon points="60.0,301.1111111111111 168.0,273.94997732132447 276.0,234.02254908313364 384.0,204.83977335723594 492.0,169.87285542524324 600.0,96.10164366401007 600.0,205.12897869454375 492.0,219.99602422881733 384.0,234.89347271919354 276.0,241.00446689585817 168.0,275.57262798475176 60.0,301.1111111111111" fill="#2a78d6" opacity="0.1"/>
+<polyline points="60.0,301.1111111111111 168.0,275.57262798475176 276.0,241.00446689585817 384.0,234.89347271919354 492.0,219.99602422881733 600.0,205.12897869454375" fill="none" stroke="#eb6834" stroke-width="3"/>
+<polyline points="60.0,301.1111111111111 168.0,273.94997732132447 276.0,234.02254908313364 384.0,204.83977335723594 492.0,169.87285542524324 600.0,96.10164366401007" fill="none" stroke="#2a78d6" stroke-width="3"/>
+<circle cx="60.0" cy="301.1111111111111" r="4" fill="#2a78d6"/>
+<circle cx="168.0" cy="273.94997732132447" r="4" fill="#2a78d6"/>
+<circle cx="276.0" cy="234.02254908313364" r="4" fill="#2a78d6"/>
+<circle cx="384.0" cy="204.83977335723594" r="4" fill="#2a78d6"/>
+<circle cx="492.0" cy="169.87285542524324" r="4" fill="#2a78d6"/>
+<circle cx="600.0" cy="96.10164366401007" r="4" fill="#2a78d6"/>
+<circle cx="60.0" cy="301.1111111111111" r="4" fill="#eb6834"/>
+<circle cx="168.0" cy="275.57262798475176" r="4" fill="#eb6834"/>
+<circle cx="276.0" cy="241.00446689585817" r="4" fill="#eb6834"/>
+<circle cx="384.0" cy="234.89347271919354" r="4" fill="#eb6834"/>
+<circle cx="492.0" cy="219.99602422881733" r="4" fill="#eb6834"/>
+<circle cx="600.0" cy="205.12897869454375" r="4" fill="#eb6834"/>
+<text x="608.0" y="92.10164366401007" font-size="13" font-weight="bold" fill="#2a78d6" font-family='Arial, sans-serif'>House price +71%</text>
+<text x="608.0" y="221.12897869454375" font-size="13" font-weight="bold" fill="#eb6834" font-family='Arial, sans-serif'>Construction cost +33%</text>
+<text x="60" y="405" font-size="11" fill="#888" font-family='Arial, sans-serif'>Source: Eurostat and INE.</text>
 </svg>

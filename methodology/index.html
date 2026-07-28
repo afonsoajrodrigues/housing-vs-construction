@@ -107,25 +107,46 @@
     <span>Code: <a href="../code/">/code</a> · Raw-data collection: <a href="../SCRAPING.md">SCRAPING.md</a></span>
   </p>
 
-  <h2><span class="h2-num">1.</span>Where the data came from</h2>
-  <p>Both series were retrieved directly from each statistics agency's own public API — no scraping was involved in getting this specific data.</p>
+  <h2><span class="h2-num">1.</span>Data sources</h2>
+  <p>Every series was retrieved directly from the issuing agency's own public API — no scraping was involved in getting this specific data. Country borders for the map are a separate, static public-domain file (no API).</p>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Series</th><th>Access method</th><th>Coverage</th></tr></thead>
+      <thead>
+        <tr><th>Source</th><th>Series</th><th>Coverage</th><th>Base year</th><th>Accessed</th><th>License</th></tr>
+      </thead>
       <tbody>
         <tr>
-          <td>Eurostat house price index (<code>prc_hpi_a</code>)</td>
-          <td>Eurostat's JSON-stat dissemination API, queried directly for all 9 countries in one request</td>
+          <td><a href="https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a" target="_blank" rel="noopener">Eurostat</a>, House Price Index (<code>prc_hpi_a</code>)</td>
+          <td>House price index, 9 countries</td>
           <td>2015–2025</td>
+          <td>2015 = 100</td>
+          <td>2026-07-23</td>
+          <td>Free reuse with attribution (Eurostat data policy)</td>
         </tr>
         <tr>
-          <td>INE construction cost index (new housing, Portugal)</td>
-          <td>INE's public JSON indicator API (<code>pindica.jsp</code>)</td>
+          <td><a href="https://www.ine.pt" target="_blank" rel="noopener">INE</a> — Statistics Portugal</td>
+          <td>New-housing construction cost index, Portugal</td>
           <td>2016–2025</td>
+          <td>2021 = 100</td>
+          <td>2026-07-23</td>
+          <td>Free reuse with attribution (INE data policy)</td>
+        </tr>
+        <tr>
+          <td><a href="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json" target="_blank" rel="noopener">Natural Earth</a> / world-atlas</td>
+          <td>Country boundary polygons, 1:110m (map only, not part of the numeric analysis)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>2026-07-23</td>
+          <td>Public domain</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <p>Access method for the two statistical series:</p>
+  <ul>
+    <li><strong>Eurostat</strong>: JSON-stat dissemination API, queried directly for all 9 countries in a single request.</li>
+    <li><strong>INE</strong>: public JSON indicator API (<code>pindica.jsp</code>).</li>
+  </ul>
   <p>Both APIs are public, require no key, and are documented in full — including the exact endpoints, query parameters, and how the right indicator/dataset codes were found — in <a href="../SCRAPING.md#35-case-study--reverse-engineering-the-ine-statistics-portugal-api">SCRAPING.md, §3.5–3.6</a>. That document also covers a separate set of exercises in HTML parsing and browser-automated scraping; those techniques were practiced on unrelated example pages and were <strong>not</strong> used to obtain the Eurostat or INE data used here.</p>
 
   <h2><span class="h2-num">2.</span>Cleaning the raw files</h2>

@@ -11,9 +11,9 @@
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     background: var(--page); color: var(--text-primary);
-    --page: #f9f9f7; --surface: #fcfcfb; --text-primary: #0b0b0b;
+    --page: #ffffff; --surface: #ffffff; --text-primary: #0b0b0b;
     --text-secondary: #52514e; --text-muted: #898781; --gridline: #e1e0d9;
-    --border: rgba(11,11,11,0.10); --accent: #2a78d6; --note-bg: #f2f1ec;
+    --border: rgba(11,11,11,0.10); --accent: #2a78d6; --note-bg: #f5f5f5;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -141,7 +141,7 @@
     <p>Nor does any single factor above fully explain the 38-point gap; the reporting and research cited here identify contributing pressures — foreign and tax-driven demand, tourism conversion of housing stock, a shrinking construction labor pool, land scarcity, slow permitting — without assigning each one a precise share of the total.</p>
 
     <div class="note">
-      <strong>How this was done:</strong> Portugal's house-price and construction-cost series were each re-based to 2020=100 to allow direct comparison across indices published on different base years. Eurostat's house-price index (prc_hpi_a) and INE's construction-cost index for new housing are the primary sources; Ireland, whose post-2008 market dynamics are not comparable to the rest of this sample, was excluded from the country comparison. Explanatory reporting and research cited above draws only on named newspapers, wire services and peer-reviewed or institutional publications, each linked below.
+      <strong>How this was done:</strong> Portugal's house-price and construction-cost series were each re-based to 2020=100 to allow direct comparison across indices published on different base years. Eurostat's house-price index (prc_hpi_a) and INE's construction-cost index for new housing are the primary sources, both retrieved via each agency's public API (no scraping); Ireland, whose post-2008 market dynamics are not comparable to the rest of this sample, was excluded from the country comparison. Explanatory reporting and research cited above draws only on named newspapers, wire services and peer-reviewed or institutional publications, each linked below. For the full breakdown — every cleaning step, formula, and limitation — see the <a href="methodology/">full methodology</a>; for the code, see <a href="code/">/code</a>.
     </div>
 
     <div class="sources">

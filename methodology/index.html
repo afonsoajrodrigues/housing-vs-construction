@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Portugal's House Prices vs. Construction Costs</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page); color: var(--text-primary);
+    --page: #ffffff; --surface: #ffffff; --text-primary: #0b0b0b;
+    --text-secondary: #52514e; --text-muted: #898781; --gridline: #e1e0d9;
+    --border: rgba(11,11,11,0.10); --accent: #2a78d6; --note-bg: #f5f5f5;
+    --code-bg: #f5f5f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      --page: #0d0d0d; --surface: #1a1a19; --text-primary: #ffffff;
+      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
+      --border: rgba(255,255,255,0.10); --accent: #3987e5; --note-bg: #222221;
+      --code-bg: #1f1f1e;
+    }
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .back { font-size: 13px; }
+  .back a { color: var(--accent); text-decoration: none; }
+  .back a:hover { text-decoration: underline; }
+
+  .kicker {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); margin: 28px 0 14px;
+  }
+  h1 {
+    font-size: clamp(24px, 4vw, 32px); line-height: 1.2; font-weight: 700;
+    margin: 0 0 14px; letter-spacing: -0.01em;
+  }
+  .dek {
+    font-size: 16.5px; line-height: 1.55; color: var(--text-secondary);
+    margin: 0 0 20px;
+  }
+  .byline {
+    font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--gridline);
+    border-bottom: 1px solid var(--gridline); padding: 12px 0; margin: 0 0 40px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+  }
+
+  h2 {
+    font-size: 20px; font-weight: 700; margin: 44px 0 8px; letter-spacing: -0.005em;
+  }
+  .h2-num { color: var(--text-muted); font-weight: 400; margin-right: 6px; }
+  h3 { font-size: 15.5px; font-weight: 700; margin: 22px 0 8px; }
+
+  p { font-size: 15.5px; line-height: 1.65; color: var(--text-primary); margin: 0 0 16px; }
+  ul, ol { padding-left: 20px; margin: 0 0 16px; }
+  li { font-size: 15.5px; line-height: 1.6; margin-bottom: 8px; }
+  a { color: var(--accent); }
+  strong { color: var(--text-primary); }
+  em { color: var(--text-secondary); }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.87em;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 6px;
+    padding: 14px 16px; overflow-x: auto; margin: 0 0 16px;
+  }
+  pre code { background: none; padding: 0; font-size: 13.5px; line-height: 1.55; }
+
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 480px; }
+  th {
+    text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em;
+    color: var(--text-muted); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--gridline);
+  }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--gridline); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .note {
+    background: var(--note-bg); border-radius: 8px; padding: 16px 18px; margin: 0 0 16px;
+    font-size: 14.5px; line-height: 1.6; color: var(--text-secondary);
+  }
+  .note strong { color: var(--text-primary); }
+
+  footer {
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--gridline);
+    font-size: 12.5px; color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="back"><a href="../">&larr; Back to the article</a></p>
+
+  <p class="kicker">Methodology — detailed breakdown</p>
+  <h1>How the house-price vs. construction-cost analysis was done</h1>
+  <p class="dek">The article's "How this was done" note gives the short version. This page is the long version: where the data came from, exactly how it was cleaned and compared, and what the analysis can't tell you. The code referenced throughout is in <a href="../code/">/code</a>.</p>
+  <p class="byline">
+    <span>Companion to: <a href="../">the article</a></span>
+    <span>Code: <a href="../code/">/code</a> · Raw-data collection: <a href="../SCRAPING.md">SCRAPING.md</a></span>
+  </p>
+
+  <h2><span class="h2-num">1.</span>Where the data came from</h2>
+  <p>Both series were retrieved directly from each statistics agency's own public API — no scraping was involved in getting this specific data.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Series</th><th>Access method</th><th>Coverage</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Eurostat house price index (<code>prc_hpi_a</code>)</td>
+          <td>Eurostat's JSON-stat dissemination API, queried directly for all 9 countries in one request</td>
+          <td>2015–2025</td>
+        </tr>
+        <tr>
+          <td>INE construction cost index (new housing, Portugal)</td>
+          <td>INE's public JSON indicator API (<code>pindica.jsp</code>)</td>
+          <td>2016–2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Both APIs are public, require no key, and are documented in full — including the exact endpoints, query parameters, and how the right indicator/dataset codes were found — in <a href="../SCRAPING.md#35-case-study--reverse-engineering-the-ine-statistics-portugal-api">SCRAPING.md, §3.5–3.6</a>. That document also covers a separate set of exercises in HTML parsing and browser-automated scraping; those techniques were practiced on unrelated example pages and were <strong>not</strong> used to obtain the Eurostat or INE data used here.</p>
+
+  <h2><span class="h2-num">2.</span>Cleaning the raw files</h2>
+  <p>Two small formatting problems had to be fixed before the numbers could be compared, both handled in <code>code/process_data.py</code>:</p>
+  <ul>
+    <li><strong>Decimal commas.</strong> INE's file uses Portuguese number formatting (<code>"95,02"</code> instead of <code>95.02</code>), so the value column is parsed as text and the comma replaced with a period before converting to a number.</li>
+    <li><strong>Text dates.</strong> INE's periods are written out as <code>"Dezembro de 2020"</code>; the four-digit year is pulled out with a regular expression rather than trying to parse the whole string as a date.</li>
+  </ul>
+  <pre><code># from process_data.py
+df["year"] = df["period"].str.extract(r"(\d{4})").astype(int)
+df["value"] = df["value"].str.replace(",", ".").astype(float)</code></pre>
+
+  <h2><span class="h2-num">3.</span>Putting both series on the same scale</h2>
+  <p>Eurostat's house-price index is published as 2015 = 100; INE's construction-cost index is published as 2021 = 100. Comparing the raw numbers would be meaningless, since they start from different baselines. Both series are re-based so that <strong>2020 = 100</strong>, which makes the two directly comparable as growth from the same starting point:</p>
+  <pre><code>index[year] = raw_value[year] / raw_value[2020] * 100</code></pre>
+  <p>This is done once per country for the price series, and once for Portugal's cost series. Re-basing only changes the reference point — the growth rate between any two years is identical whether it's computed on the raw series or the re-based one.</p>
+
+  <h2><span class="h2-num">4.</span>Growth and CAGR</h2>
+  <p>For each country's house-price index, and for Portugal's construction-cost index, two numbers are computed over the 2020–2025 window:</p>
+  <ul>
+    <li><strong>Total growth</strong>: <code>index_2025 − index_2020</code> (with <code>index_2020</code> always 100 after re-basing).</li>
+    <li><strong>Compound annual growth rate (CAGR)</strong>, over the 5 years: <code>((index_2025 / index_2020) ** (1/5) − 1) * 100</code>.</li>
+  </ul>
+  <p>Portugal's price/cost gap — the article's central number — is simply the difference between the two re-based index values in the same year: a house-price index of 171 against a construction-cost index of 133 in 2025 is a 38-point gap. That is a gap in <em>percentage points</em>, not a percentage — the two are kept separate deliberately, since conflating them is an easy way to overstate a result like this one.</p>
+
+  <h2><span class="h2-num">5.</span>Why Ireland is excluded</h2>
+  <p>Nine countries have complete Eurostat house-price data through 2025, but only eight are compared. Ireland's series was left out on editorial grounds, not a data problem: its market crashed by more than half after 2008 and only recovered from that unusually low base, so its 2020–2025 growth rate reflects a different, incomparable trajectory rather than the same dynamic playing out elsewhere. Ireland's raw data is still in <code>code/data/house_prices.csv</code> for anyone who wants to include it.</p>
+
+  <h2><span class="h2-num">6.</span>What this analysis doesn't show</h2>
+  <ul>
+    <li>A construction-cost index measures materials and labor. It excludes land price, developer margin, financing costs and taxes — all plausible contributors to the gap that this analysis can't separate out or quantify individually.</li>
+    <li>Eurostat's house-price index covers new and existing homes together; INE's construction-cost index covers new housing only. Re-basing both to 2020 = 100 makes their growth rates comparable — it doesn't make the two series measure the same thing.</li>
+    <li>Portugal is the only country here with a construction-cost series reaching 2025, so the price-vs-cost comparison — the analysis's main finding — could only be run for Portugal. Whether Spain or the Netherlands show a similar gap between their own prices and costs isn't known from this data.</li>
+    <li>Eight countries is not all of Europe — it's the set with a complete 2015–2025 Eurostat series. Most of Eastern and Southern Europe besides Spain and Italy isn't represented.</li>
+  </ul>
+  <div class="note">
+    <strong>A note on the construction-cost cross-check mentioned in the article:</strong> INE's figure was checked against Eurostat's own, separately published construction-cost series for Portugal, which uses a different methodology and base year but overlaps through 2023 — the two agreed within 1.1 percentage points of cumulative growth. That comparison was done directly on the two raw series rather than through a saved script, so it isn't reproduced as code in this repository.
+  </div>
+
+  <h2><span class="h2-num">7.</span>Reproducing it</h2>
+  <p>Everything above runs from <code>code/process_data.py</code>, which reads the CSVs in <code>code/data/</code> and writes the cleaned, re-based tables back out as CSV. The charts and map are built from those outputs by two further scripts:</p>
+  <pre><code>cd code
+pip install pandas
+python process_data.py    # clean + re-base + growth/CAGR -> data/processed_*.csv
+python make_charts.py     # -> ../assets/chart-*.svg
+python make_map.py        # -> ../assets/map.html</code></pre>
+  <p>No manual editing happens between steps. To try this on a different country or period, swap the files in <code>code/data/</code> for an equivalent pair of series and adjust the <code>YEARS</code> and <code>COUNTRY_NAMES</code> constants at the top of <code>process_data.py</code>.</p>
+
+  <footer>Companion page to <a href="../">the article</a>. Code: <a href="../code/">/code</a>. Data-collection write-up: <a href="../SCRAPING.md">SCRAPING.md</a>.</footer>
+
+</div>
+</body>
+</html>

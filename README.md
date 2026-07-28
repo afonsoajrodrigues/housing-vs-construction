@@ -7,6 +7,7 @@ A data journalism piece comparing Portugal's house-price index (Eurostat) agains
 ## Contents
 
 - `index.html` — the article
+- `methodology/` — detailed methodology: exact cleaning steps, formulas, editorial decisions, and limitations
 - `assets/chart-price-vs-cost.svg` — Portugal's house-price index vs. construction-cost index, 2020–2025
 - `assets/chart-country-growth.svg` — house-price growth by country, 2020–2025
 - `assets/map.html` — interactive map of house-price growth across Europe
@@ -15,12 +16,17 @@ A data journalism piece comparing Portugal's house-price index (Eurostat) agains
 
 ## How the data was collected
 
-The raw numbers in `code/data/` (Eurostat's house price index, INE's
-construction cost index) came out of a separate project practicing web
-scraping and public-data APIs — static HTML parsing, browser automation,
-Scrapy, and reverse-engineering official statistical APIs (INE, Eurostat,
-World Bank, UN, NASA, the EU open data portal). The full write-up of that
-process is in **[SCRAPING.md](SCRAPING.md)**.
+The raw numbers in `code/data/` — Eurostat's house price index and INE's
+construction cost index — were retrieved directly from each agency's public
+API: Eurostat's JSON-stat dissemination API and INE's JSON indicator API.
+**No scraping was used to obtain this specific data.** Both endpoints, and
+how they were found, are documented in
+[SCRAPING.md, §3.5–3.6](SCRAPING.md#35-case-study--reverse-engineering-the-ine-statistics-portugal-api).
+That document also covers a broader set of exercises in HTML parsing and
+browser-automated scraping (Selenium, Playwright, Scrapy) against unrelated
+example sources (World Bank, UN, NASA, the EU open data portal) — those
+techniques were practiced separately and were not part of getting the data
+used in this piece.
 
 ## How the charts and the map were made
 
